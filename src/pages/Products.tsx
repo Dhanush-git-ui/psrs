@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { PRODUCTS, CATEGORIES } from '@/data/products';
+import { PRODUCTS, CATEGORIES, BASE_PRODUCTS, convertInventoryToProduct } from '@/data/products';
 import type { Product } from '@/data/products';
 import { useQuote } from '@/context/QuoteContext';
 import { Search, SlidersHorizontal, ChevronRight, HelpCircle, Settings2, Sparkles } from 'lucide-react';
@@ -10,6 +10,30 @@ export default function Products() {
   const { addToQuote } = useQuote();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [productsList, setProductsList] = useState<Product[]>(PRODUCTS);
+
+  useEffect(() => {
+    const fetchDynamicProducts = async () => {
+      try {
+        const response = await fetch('https://psrs-admin.vercel.app/api/inventory');
+        if (!response.ok) throw new Error('API failed');
+        const data = await response.json();
+        if (data && data.length > 0) {
+          const mappedInventory = data
+            .filter((item: any) => item.sku !== 'PRM-AT-70L4R')
+            .map(convertInventoryToProduct);
+          
+          setProductsList([
+            ...BASE_PRODUCTS,
+            ...mappedInventory
+          ]);
+        }
+      } catch (err) {
+        console.warn('Unable to connect to live products API. Using local offline fallback data.', err);
+      }
+    };
+    fetchDynamicProducts();
+  }, []);
   
   // AI Assistant States
   const [aiAssistantOpen, setAiAssistantOpen] = useState(false);
@@ -41,7 +65,7 @@ export default function Products() {
   };
 
   // Filter products based on search term & category selection
-  const filteredProducts = PRODUCTS.filter((product) => {
+  const filteredProducts = productsList.filter((product) => {
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
                           product.tagline.toLowerCase().includes(searchTerm.toLowerCase()) || 
                           product.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -61,13 +85,13 @@ export default function Products() {
     
     if (aiAnswers.industry === 'water-well' || aiAnswers.depth === 'deep') {
       // Recommend Inwell Rig and Deep Borewell Motors
-      matches = PRODUCTS.filter((p) => p.id === 'psr-h6-waterwell' || p.id === 'at-70l4r-l');
+      matches = productsList.filter((p) => p.id === 'psr-h6-waterwell' || p.id === 'at-70l4r-l');
     } else if (aiAnswers.industry === 'mining' || aiAnswers.diameter === 'large') {
       // Recommend Crawler Drill and high torque motor
-      matches = PRODUCTS.filter((p) => p.id === 'psr-c300-crawler' || p.id === 'at-70l4r-t');
+      matches = productsList.filter((p) => p.id === 'psr-c300-crawler' || p.id === 'at-70l4r-t');
     } else {
       // Recommend Wagon Drill and standard motor
-      matches = PRODUCTS.filter((p) => p.id === 'psr-w100-wagon' || p.id === 'at-70l4r-std');
+      matches = productsList.filter((p) => p.id === 'psr-w100-wagon' || p.id === 'at-70l4r-std');
     }
 
     setAiRecommendation(matches);

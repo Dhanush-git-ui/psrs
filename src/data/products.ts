@@ -57,7 +57,7 @@ export const CATEGORIES = [
   { name: 'Air System', slug: 'air-system', desc: 'Inlet filter elements and exhaust deflector silencers.' }
 ];
 
-const BASE_PRODUCTS: Product[] = [
+export const BASE_PRODUCTS: Product[] = [
   {
     id: 'psr-c300-crawler',
     name: 'PSR-C300 Heavy Hydraulic Crawler Drill',
@@ -361,7 +361,7 @@ const BASE_PRODUCTS: Product[] = [
 ];
 
 // Helper to convert InventoryItem to Product
-function convertInventoryToProduct(item: any): Product {
+export function convertInventoryToProduct(item: any): Product {
   const categorySlugMap: Record<string, string> = {
     'Rotation Motors': 'rotation-motors',
     'Crankcase': 'crankcase',

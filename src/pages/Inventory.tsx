@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { INVENTORY, SEARCH_SYNONYMS } from '@/data/inventory';
 import type { InventoryItem } from '@/data/inventory';
 import { useQuote } from '@/context/QuoteContext';
@@ -17,6 +17,22 @@ export default function Inventory() {
   // State for inventory items to support simulation of Stock In / Stock Out
   const [inventoryList, setInventoryList] = useState<InventoryItem[]>(INVENTORY);
   const [selectedItem, setSelectedItem] = useState<InventoryItem | null>(null);
+
+  useEffect(() => {
+    const fetchInventory = async () => {
+      try {
+        const response = await fetch('https://psrs-admin.vercel.app/api/inventory');
+        if (!response.ok) throw new Error('API request failed');
+        const data = await response.json();
+        if (data && data.length > 0) {
+          setInventoryList(data);
+        }
+      } catch (err) {
+        console.warn('Unable to connect to live inventory API. Using local offline fallback data.', err);
+      }
+    };
+    fetchInventory();
+  }, []);
   
   // Stock adjustments
   const [stockAmount, setStockAmount] = useState<number>(1);

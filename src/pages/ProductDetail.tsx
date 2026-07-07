@@ -1,9 +1,10 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { PRODUCTS } from '@/data/products';
+import { PRODUCTS, BASE_PRODUCTS, convertInventoryToProduct } from '@/data/products';
+import type { Product } from '@/data/products';
 import { useQuote } from '@/context/QuoteContext';
 import HotspotExplorer from '@/components/ui/HotspotExplorer';
 import { ArrowLeft, Check, Download, FileText, Send, HelpCircle, CheckCircle } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -18,8 +19,33 @@ export default function ProductDetail() {
     greaseSeal: 'Standard NBR rubber'
   });
 
+  const [productsList, setProductsList] = useState<Product[]>(PRODUCTS);
+
+  useEffect(() => {
+    const fetchDynamicProducts = async () => {
+      try {
+        const response = await fetch('https://psrs-admin.vercel.app/api/inventory');
+        if (!response.ok) throw new Error('API failed');
+        const data = await response.json();
+        if (data && data.length > 0) {
+          const mappedInventory = data
+            .filter((item: any) => item.sku !== 'PRM-AT-70L4R')
+            .map(convertInventoryToProduct);
+          
+          setProductsList([
+            ...BASE_PRODUCTS,
+            ...mappedInventory
+          ]);
+        }
+      } catch (err) {
+        console.warn('Unable to connect to live products API. Using local offline fallback data.', err);
+      }
+    };
+    fetchDynamicProducts();
+  }, []);
+
   // Find current product
-  const product = PRODUCTS.find((p) => p.slug === slug);
+  const product = productsList.find((p) => p.slug === slug);
 
   if (!product) {
     return (
@@ -36,7 +62,7 @@ export default function ProductDetail() {
   const isAlreadyInQuote = quoteItems.some((item) => item.product.id === product.id);
 
   // Related products (same category, excluding current product)
-  const relatedProducts = PRODUCTS.filter(
+  const relatedProducts = productsList.filter(
     (p) => p.categorySlug === product.categorySlug && p.id !== product.id
   ).slice(0, 3);
 
