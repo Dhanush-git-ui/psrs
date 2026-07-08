@@ -278,6 +278,7 @@ export default function ProductDetail() {
             <div className="space-y-3">
               <a
                 href={product.brochureUrl}
+                download
                 className="flex items-center justify-between p-4 bg-white border border-brand-bordergray/60 rounded-xl hover:border-brand-red transition-all duration-300 group"
               >
                 <div className="flex items-center gap-3">
@@ -294,6 +295,7 @@ export default function ProductDetail() {
 
               <a
                 href={product.datasheetUrl}
+                download
                 className="flex items-center justify-between p-4 bg-white border border-brand-bordergray/60 rounded-xl hover:border-brand-red transition-all duration-300 group"
               >
                 <div className="flex items-center gap-3">

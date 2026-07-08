@@ -93,8 +93,8 @@ export const BASE_PRODUCTS: Product[] = [
     },
     hotspots: [],
     faqs: [],
-    brochureUrl: '#',
-    datasheetUrl: '#',
+    brochureUrl: '/brochure.pdf',
+    datasheetUrl: '/datasheet.pdf',
     image: 'crawler',
     imageUrl: '/images/products/crawler_drill_rig.png'
   },
@@ -133,8 +133,8 @@ export const BASE_PRODUCTS: Product[] = [
     },
     hotspots: [],
     faqs: [],
-    brochureUrl: '#',
-    datasheetUrl: '#',
+    brochureUrl: '/brochure.pdf',
+    datasheetUrl: '/datasheet.pdf',
     image: 'wagon',
     imageUrl: '/images/products/wagon_drill.png'
   },
@@ -173,8 +173,8 @@ export const BASE_PRODUCTS: Product[] = [
     },
     hotspots: [],
     faqs: [],
-    brochureUrl: '#',
-    datasheetUrl: '#',
+    brochureUrl: '/brochure.pdf',
+    datasheetUrl: '/datasheet.pdf',
     image: 'inwell',
     imageUrl: '/images/products/inwell_drill.png'
   },
@@ -212,8 +212,8 @@ export const BASE_PRODUCTS: Product[] = [
     },
     hotspots: [],
     faqs: [],
-    brochureUrl: '#',
-    datasheetUrl: '#',
+    brochureUrl: '/brochure.pdf',
+    datasheetUrl: '/datasheet.pdf',
     image: 'rock_drill',
     imageUrl: '/images/products/rock_drill.png'
   },
@@ -251,8 +251,8 @@ export const BASE_PRODUCTS: Product[] = [
     },
     hotspots: [],
     faqs: [],
-    brochureUrl: '#',
-    datasheetUrl: '#',
+    brochureUrl: '/brochure.pdf',
+    datasheetUrl: '/datasheet.pdf',
     image: 'slim_drill',
     imageUrl: '/images/products/slim_drill.png'
   },
@@ -317,8 +317,8 @@ export const BASE_PRODUCTS: Product[] = [
         answer: 'The standard motor operates efficiently at 12 bar (174 PSI). It can function down to 7 bar with reduced torque, but should not exceed 15 bar to prevent bearing seal fatigue.'
       }
     ],
-    brochureUrl: '#',
-    datasheetUrl: '#',
+    brochureUrl: '/brochure.pdf',
+    datasheetUrl: '/datasheet.pdf',
     image: 'wagon',
     imageUrl: '/images/products/pneumatic_motor.png'
   },
@@ -373,8 +373,8 @@ export const BASE_PRODUCTS: Product[] = [
         answer: 'Yes, like all pneumatic motors, a line oiler delivering rock drill oil (ISO 100 or equivalent) at a rate of 2-3 drops per minute is essential.'
       }
     ],
-    brochureUrl: '#',
-    datasheetUrl: '#',
+    brochureUrl: '/brochure.pdf',
+    datasheetUrl: '/datasheet.pdf',
     image: 'crawler',
     imageUrl: '/images/products/pneumatic_motor.png'
   },
@@ -429,8 +429,8 @@ export const BASE_PRODUCTS: Product[] = [
         answer: 'Yes. The double-lip front seals are designed to resist soap and foam chemicals, keeping the internal oil sump clean.'
       }
     ],
-    brochureUrl: '#',
-    datasheetUrl: '#',
+    brochureUrl: '/brochure.pdf',
+    datasheetUrl: '/datasheet.pdf',
     image: 'inwell',
     imageUrl: '/images/products/pneumatic_motor.png'
   },
@@ -467,8 +467,8 @@ export const BASE_PRODUCTS: Product[] = [
     },
     hotspots: [],
     faqs: [],
-    brochureUrl: '#',
-    datasheetUrl: '#',
+    brochureUrl: '/brochure.pdf',
+    datasheetUrl: '/datasheet.pdf',
     image: 'spares',
     imageUrl: '/images/products/drivetrain_spares.png'
   },
@@ -505,8 +505,8 @@ export const BASE_PRODUCTS: Product[] = [
     },
     hotspots: [],
     faqs: [],
-    brochureUrl: '#',
-    datasheetUrl: '#',
+    brochureUrl: '/brochure.pdf',
+    datasheetUrl: '/datasheet.pdf',
     image: 'tools',
     imageUrl: '/images/products/drilling_tools.png'
   }
