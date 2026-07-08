@@ -96,7 +96,7 @@ export const BASE_PRODUCTS: Product[] = [
     brochureUrl: '#',
     datasheetUrl: '#',
     image: 'crawler',
-    imageUrl: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600'
+    imageUrl: '/images/products/crawler_drill_rig.png'
   },
   {
     id: 'psr-w100-wagon',
@@ -136,7 +136,7 @@ export const BASE_PRODUCTS: Product[] = [
     brochureUrl: '#',
     datasheetUrl: '#',
     image: 'wagon',
-    imageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600'
+    imageUrl: '/images/products/wagon_drill.png'
   },
   {
     id: 'psr-h6-waterwell',
@@ -176,7 +176,85 @@ export const BASE_PRODUCTS: Product[] = [
     brochureUrl: '#',
     datasheetUrl: '#',
     image: 'inwell',
-    imageUrl: 'https://images.unsplash.com/photo-1535813547-99c456a41d4a?q=80&w=600'
+    imageUrl: '/images/products/inwell_drill.png'
+  },
+  {
+    id: 'at-pneumatic-rock-drill',
+    name: 'Airtech Pneumatic Rock Drill',
+    slug: 'airtech-pneumatic-rock-drill',
+    category: 'Drilling Rigs & Machinery',
+    categorySlug: 'rigs-machinery',
+    tagline: 'Cast Iron Percussion. High-Frequency Blast Hole Tool.',
+    description: 'Robust percussion tools manufactured from cast iron, commonly used for blast-hole rock drilling.',
+    longDescription: 'The Airtech Pneumatic Rock Drill is a premier percussion drill designed for high penetration rates in hard rock quarries. Its cast iron main body provides outstanding shock dampening, while the internal piston transmits maximum kinetic energy to the drill steel.',
+    features: [
+      'High-frequency impact piston mechanism',
+      'Heavy-duty cast iron body casting',
+      'Dual flushing air-water tube inlet',
+      'Anti-vibration side handle mounts'
+    ],
+    benefits: [
+      'Unmatched drilling speed in hard quartz or basalt',
+      'Reduced operator fatigue from integrated dampening',
+      'Easy disassembly and maintenance in the field'
+    ],
+    applications: [
+      'Blast-hole rock drilling in quarries',
+      'Civil highway anchoring',
+      'Micro-pile boring'
+    ],
+    specs: {
+      holeDiameter: '32 – 45 mm',
+      drillDepth: '6 meters',
+      motorType: 'Pneumatic Hammer (3.2 kW)',
+      weight: '24 kg',
+      dimensions: '580 x 220 x 180 mm'
+    },
+    hotspots: [],
+    faqs: [],
+    brochureUrl: '#',
+    datasheetUrl: '#',
+    image: 'rock_drill',
+    imageUrl: '/images/products/rock_drill.png'
+  },
+  {
+    id: 'slim-drill-ld4',
+    name: 'Slim Drill LD4 Machine',
+    slug: 'slim-drill-ld4-machine',
+    category: 'Drilling Rigs & Machinery',
+    categorySlug: 'rigs-machinery',
+    tagline: 'Narrow Space Drilling. Compact LD4 Guide Mast.',
+    description: 'Compact units optimized for narrow workspace conditions, including models like the Slim Drill LD4.',
+    longDescription: 'The Slim Drill LD4 is a highly compact, lightweight drilling unit engineered specifically for narrow mining galleries and confined construction benches. Mounted on a lightweight aluminum frame with manual leveling anchors, it provides stable drilling operations in hard-to-reach locations.',
+    features: [
+      'Ultra-compact sliding guide mast profile',
+      'Lightweight structural aluminum alloy frame',
+      'Pneumatic feed feed screw mechanism',
+      'High power-to-weight ratio rotation motor'
+    ],
+    benefits: [
+      'Operates in tight spaces down to 1.2 meters clearance',
+      'Extremely easy manual transportation and set up',
+      'High boring accuracy in vertical and angular configurations'
+    ],
+    applications: [
+      'Narrow mining gallery bolt installations',
+      'Foundation anchoring in basements',
+      'Confined quarry benches'
+    ],
+    specs: {
+      holeDiameter: '90 – 115 mm',
+      drillDepth: '30 meters',
+      motorType: 'Pneumatic Feed Screw (2.8 HP)',
+      weight: '180 kg',
+      dimensions: '1100 x 480 x 780 mm'
+    },
+    hotspots: [],
+    faqs: [],
+    brochureUrl: '#',
+    datasheetUrl: '#',
+    image: 'slim_drill',
+    imageUrl: '/images/products/slim_drill.png'
   },
   {
     id: 'at-70l4r-std',
@@ -244,7 +322,7 @@ export const BASE_PRODUCTS: Product[] = [
     brochureUrl: '#',
     datasheetUrl: '#',
     image: 'wagon',
-    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600'
+    imageUrl: '/images/products/pneumatic_motor.png'
   },
   {
     id: 'at-70l4r-t',
@@ -300,7 +378,7 @@ export const BASE_PRODUCTS: Product[] = [
     brochureUrl: '#',
     datasheetUrl: '#',
     image: 'crawler',
-    imageUrl: 'https://images.unsplash.com/photo-1485083269755-a7b559a4fe5e?q=80&w=600'
+    imageUrl: '/images/products/pneumatic_motor.png'
   },
   {
     id: 'at-70l4r-l',
@@ -356,7 +434,83 @@ export const BASE_PRODUCTS: Product[] = [
     brochureUrl: '#',
     datasheetUrl: '#',
     image: 'inwell',
-    imageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600'
+    imageUrl: '/images/products/pneumatic_motor.png'
+  },
+  {
+    id: 'heavy-drilling-spares',
+    name: 'Heavy Drilling Machine Spares Package',
+    slug: 'heavy-drilling-machine-spares-package',
+    category: 'Crankcase',
+    categorySlug: 'crankcase',
+    tagline: 'OEM Drivetrain Spares. Precision Machined Gears.',
+    description: 'Precision drivetrain parts such as worm gear wheels, main shaft gear assemblies, idler gear shafts, and output gears.',
+    longDescription: 'Ensure maximum torque transfer and zero power loss with our heavy drilling machine drivetrain spares package. Made from high-grade case-hardened steel alloys and precision hobbed to sub-micron tolerances, these gears guarantee silent and smooth operation under the most severe drilling loads.',
+    features: [
+      'Case-hardened steel gear surfaces (58-62 HRC)',
+      'Precision hobbed profiles for optimal tooth contact',
+      'High-tensile steel idler shafts',
+      'Compatible with major wagon and crawler rigs'
+    ],
+    benefits: [
+      'Eliminates gear stripping under peak torque loads',
+      'Improves overall mechanical drivetrain efficiency',
+      'Extends rotation head life-cycles'
+    ],
+    applications: [
+      'Wagon drill rotation head refits',
+      'Crawler drill gearbox maintenance',
+      'Heavy rotary head overhauls'
+    ],
+    specs: {
+      motorType: 'Drivetrain Gears Set',
+      dimensions: 'Various sizing packages',
+      weight: '15.4 kg (combined package)',
+      compatibleAccessories: 'NSK Bearings, Gear Oil ISO 150'
+    },
+    hotspots: [],
+    faqs: [],
+    brochureUrl: '#',
+    datasheetUrl: '#',
+    image: 'spares',
+    imageUrl: '/images/products/drivetrain_spares.png'
+  },
+  {
+    id: 'drilling-tools-pkg',
+    name: 'Drilling Tools Package',
+    slug: 'heavy-duty-drilling-tools-package',
+    category: 'Air System',
+    categorySlug: 'air-system',
+    tagline: 'High-Strength Drill Steel. Tungsten Button Bits.',
+    description: 'High-strength drill rods (ranging from 2-metre to 3-metre configurations), hammer assemblies, thread button bits, and pneumatic distributor valves.',
+    longDescription: 'A complete high-performance drilling toolset containing premium 2m to 3m carburized steel drill rods, DTH hammer assemblies, tungsten-carbide thread button bits, and line distributor valves. Designed for abrasive rock formations.',
+    features: [
+      'Carburized hollow steel alloy drill rods',
+      'Hard-faced tungsten carbide button bit inserts',
+      'High-efficiency pneumatic flushing valves',
+      'Heavy impact hammer pistons'
+    ],
+    benefits: [
+      'Increases penetration speed by up to 25%',
+      'Reduces drill rod wear in highly abrasive granite',
+      'Provides superior hole cleaning efficiency'
+    ],
+    applications: [
+      'Basalt and granite blast hole drilling',
+      'Deep aquifer water well boring',
+      'Mining extraction benches'
+    ],
+    specs: {
+      motorType: 'Boring Tools Package',
+      dimensions: '2m & 3m rod lengths, 4" & 5" bits',
+      weight: '38.0 kg (combined package)',
+      compatibleAccessories: 'Thread lubricant, seal rings'
+    },
+    hotspots: [],
+    faqs: [],
+    brochureUrl: '#',
+    datasheetUrl: '#',
+    image: 'tools',
+    imageUrl: '/images/products/drilling_tools.png'
   }
 ];
 
