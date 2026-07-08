@@ -84,12 +84,12 @@ export default function SpareParts() {
               Interactive Spare Parts Explorer
             </h1>
             <p className="font-sans text-sm text-white/70">
-              Cross-verified catalog of spare parts and replacement components for the **Airtech Piston Rotation Motor**. Verify filenames and request shipping quotes.
+              Verified list of spare parts for the Airtech Piston Rotation Motor. Check files and request quotes.
             </p>
           </div>
           
           <div className="relative z-10 px-4 py-3 border border-white/20 bg-white/5 rounded-xl font-sans text-xs text-white/80 leading-relaxed max-w-[280px]">
-            <strong>Logistics Note:</strong> Original Apple iOS HEIC photo files have been indexed and cross-referenced with global API specifications.
+            <strong>Info:</strong> All spare parts have been checked and verified for compatibility.
           </div>
         </div>
 
@@ -148,7 +148,7 @@ export default function SpareParts() {
                 <h6 className="font-heading text-xs font-bold uppercase tracking-wider">Verified Authenticity</h6>
               </div>
               <p className="font-sans text-[11px] text-white/70 leading-relaxed font-medium">
-                Every listed file has been physically inspected and checked against the original manufacturer engineering logs.
+                All listed spare parts have been checked against original design logs.
               </p>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function SpareParts() {
                           </div>
                           {part.correctionNotes && (
                             <div className="p-2.5 rounded-lg bg-warning/5 border border-warning/10 font-sans text-[10px] text-brand-graphite leading-relaxed">
-                              <strong>Verification Note:</strong> {part.correctionNotes}
+                              <strong>Note:</strong> {part.correctionNotes}
                             </div>
                           )}
                           <p className="font-sans text-xs text-brand-graphite leading-relaxed pt-2">
@@ -222,12 +222,12 @@ export default function SpareParts() {
                               {isExpanded ? (
                                 <>
                                   <ChevronUp size={12} />
-                                  Hide Specifications
+                                  Hide Details
                                 </>
                               ) : (
                                 <>
                                   <ChevronDown size={12} />
-                                  View Sizing & Price
+                                  View Details
                                 </>
                               )}
                             </button>
@@ -279,10 +279,10 @@ export default function SpareParts() {
                           {isInQuote ? (
                             <>
                               <Check size={12} />
-                              Added to Quote List
+                              Added
                             </>
                           ) : (
-                            'Add to Request Quote'
+                            'Add to Quote'
                           )}
                         </button>
                       </div>

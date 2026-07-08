@@ -175,7 +175,7 @@ export default function ProductDetail() {
                   Custom Engineering Options
                 </h4>
                 <p className="font-sans text-[11px] text-brand-graphite leading-relaxed">
-                  Configure precision parameters tailored for your local operating geology and PTO variations.
+                  Configure settings for your local drilling conditions.
                 </p>
               </div>
 
@@ -310,7 +310,7 @@ export default function ProductDetail() {
             </div>
 
             <div className="p-4 rounded-xl bg-brand-lightgray border border-brand-bordergray/60 font-sans text-[11px] text-brand-graphite leading-relaxed">
-              <strong>Export compliance:</strong> Certified for shipping under API, ISO, and standard custom parameters globally. Special freight container routing available on demand.
+              <strong>Export Info:</strong> Certified for global shipping under API and ISO rules.
             </div>
           </div>
         </div>
@@ -319,7 +319,7 @@ export default function ProductDetail() {
         {product.hotspots.length > 0 && (
           <div className="space-y-6 mb-16">
             <h3 className="font-heading text-lg font-bold uppercase tracking-widest text-brand-charcoal border-b border-brand-bordergray pb-3">
-              Design Anatomy & Metallurgy
+              Design and Part Details
             </h3>
             <HotspotExplorer hotspots={product.hotspots} productType={product.image} />
           </div>
@@ -328,7 +328,7 @@ export default function ProductDetail() {
         {/* 3. Technical Specifications Grid (Space Grotesk Font) */}
         <div className="space-y-6 mb-16">
           <h3 className="font-heading text-lg font-bold uppercase tracking-widest text-brand-charcoal border-b border-brand-bordergray pb-3">
-            Technical Engineering Parameters
+            Specifications
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 font-mono">
@@ -359,7 +359,7 @@ export default function ProductDetail() {
           <div className="p-8 border border-brand-bordergray rounded-2xl bg-white space-y-6 shadow-sm">
             <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-brand-red flex items-center gap-2">
               <CheckCircle size={18} />
-              Key Construction Features
+              Key Features
             </h4>
             <ul className="space-y-3 font-sans text-sm text-brand-graphite leading-relaxed">
               {product.features.map((feat, i) => (
@@ -374,7 +374,7 @@ export default function ProductDetail() {
           <div className="p-8 border border-brand-bordergray rounded-2xl bg-white space-y-6 shadow-sm">
             <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-brand-red flex items-center gap-2">
               <CheckCircle size={18} />
-              Operational Advantages
+              Benefits
             </h4>
             <ul className="space-y-3 font-sans text-sm text-brand-graphite leading-relaxed">
               {product.benefits.map((ben, i) => (
@@ -420,15 +420,15 @@ export default function ProductDetail() {
               Submit a direct inquiry for {product.name}
             </h3>
             <p className="font-sans text-sm text-white/70">
-              Our engineering sales division will evaluate your application requirements and reply with custom unit layouts, tooling options, and CIF price details within 24 hours.
+              Our team will review your request and reply within 24 hours with pricing and details.
             </p>
 
             {formSubmitted ? (
               <div className="p-6 bg-brand-red/10 border border-brand-red rounded-2xl flex items-center gap-3 animate-fade-in">
                 <Check className="text-brand-red shrink-0" size={24} />
                 <div className="space-y-0.5">
-                  <h5 className="font-heading text-sm font-bold text-white uppercase tracking-wider">Inquiry Submitted Successfully</h5>
-                  <p className="font-sans text-xs text-white/70">Our logistics desks have received your inquiry file. A response is being prepared.</p>
+                  <h5 className="font-heading text-sm font-bold text-white uppercase tracking-wider">Inquiry Sent</h5>
+                  <p className="font-sans text-xs text-white/70">We have received your request and will reply soon.</p>
                 </div>
               </div>
             ) : (
@@ -467,7 +467,7 @@ export default function ProductDetail() {
                   type="submit"
                   className="sm:col-span-2 py-4 bg-brand-red hover:bg-brand-crimson text-white font-heading text-xs font-semibold uppercase tracking-widest rounded-xl transition-colors flex items-center justify-center gap-2"
                 >
-                  <Send size={14} /> Submit Technical Request
+                  <Send size={14} /> Submit Inquiry
                 </button>
               </form>
             )}
@@ -498,7 +498,7 @@ export default function ProductDetail() {
                     {p.tagline}
                   </p>
                   <div className="flex items-center gap-1.5 font-heading text-[9px] font-bold uppercase tracking-widest text-brand-charcoal/60 group-hover:text-brand-red transition-colors mt-4">
-                    Explore specifications <ArrowLeft size={10} className="transform rotate-180 group-hover:translate-x-1 transition-transform" />
+                    Explore details <ArrowLeft size={10} className="transform rotate-180 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
               ))}

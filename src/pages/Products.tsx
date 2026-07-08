@@ -123,7 +123,7 @@ export default function Products() {
               Drill Systems & Spares
             </h1>
             <p className="font-sans text-sm text-white/70">
-              Browse our inventory of premium rock drill rigs, heavy-duty crawler carriers, valveless DTH hammers, and hard-carbide button bits.
+              Browse our list of rock drills, crawler rigs, and high-quality drilling tools.
             </p>
           </div>
           
@@ -246,7 +246,7 @@ export default function Products() {
                   <span className="font-heading text-[10px] font-bold text-brand-red uppercase tracking-wider">Recommendation Result</span>
                   <h3 className="font-display text-2xl font-bold text-brand-charcoal">Recommended PSR Configurations:</h3>
                   <p className="font-sans text-xs text-brand-graphite">
-                    Based on your requirements, we suggest these industrial units designed for maximum penetrative velocity.
+                    Based on your choices, we suggest these tools for your work.
                   </p>
 
                   <div className="space-y-4 pt-2">
@@ -365,7 +365,7 @@ export default function Products() {
                 <h6 className="font-heading text-xs font-bold uppercase tracking-wider">Need Custom Specs?</h6>
               </div>
               <p className="font-sans text-[11px] text-white/70 leading-relaxed">
-                Contact our Bangalore engineering office directly for custom guide masts, specific rotation gears, or custom DTH assemblies.
+                Contact our Bangalore office for custom guides, special gears, or other custom tools.
               </p>
               <Link
                 to="/contact"
@@ -438,7 +438,7 @@ export default function Products() {
                           to={`/products/${prod.categorySlug}/${prod.slug}`}
                           className="flex-grow text-center py-2.5 border border-brand-charcoal hover:border-brand-red hover:text-brand-red text-brand-charcoal font-heading text-[10px] font-bold uppercase tracking-wider rounded-lg transition-colors"
                         >
-                          View Specification
+                          View Details
                         </Link>
                         <button
                           onClick={() => addToQuote(prod)}
