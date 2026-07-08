@@ -64,24 +64,24 @@ export const BASE_PRODUCTS: Product[] = [
     slug: 'psr-c300-heavy-hydraulic-crawler-drill',
     category: 'Drilling Rigs & Machinery',
     categorySlug: 'rigs-machinery',
-    tagline: 'Heavy Strata Crawler Platform. 450 RPM Rotation.',
-    description: 'A diesel-hydraulic crawler drill rig designed for mining blast holes, anchoring, and geothermal applications.',
-    longDescription: 'The PSR-C300 represents our premier crawler drilling platform. Built on standard heavy-duty structural crawler tracks with independent high-torque traction gearboxes, it operates reliably on extreme 30-degree slopes. Equipped with a robust guide mast, automated rod handling, and a high-frequency hydraulic rotation head, it is optimized for high productivity quarrying.',
+    tagline: 'Heavy Crawler Drill for Tough Rocks.',
+    description: 'A strong crawler drill machine for mining and deep hole drilling.',
+    longDescription: 'The PSR-C300 is a powerful crawler drill rig. It moves easily on steep slopes using heavy tracks. It features an automated rod changer and a strong rotation head, making it ideal for fast quarry drilling.',
     features: [
-      'Heavy-duty crawlers with independent track oscillation controls',
-      'Dual hydraulic rod clamping and guide break system',
-      'Integrated high-pressure dust collection system',
-      'Ergonomic pilot valve operating deck'
+      'Heavy tracks for steep slopes',
+      'Automatic rod changer',
+      'Dust collection system',
+      'Simple control panel'
     ],
     benefits: [
-      'Commanding traction limits in muddy or fractured quarry terrain',
-      'Drastically reduced drill rod replacement cycles',
-      'Sub-micron air filtration for maximum crew safety'
+      'Works on rough ground',
+      'Saves rod change time',
+      'Cleans air for safety'
     ],
     applications: [
-      'Iron ore and limestone open pit blast holes',
-      'Civil anchoring and micro-piling',
-      'Geothermal loop boring'
+      'Open pit mine holes',
+      'Civil anchoring',
+      'Geothermal boring'
     ],
     specs: {
       holeDiameter: '102 – 165 mm',
@@ -104,24 +104,24 @@ export const BASE_PRODUCTS: Product[] = [
     slug: 'psr-w100-pneumatic-wagon-drill',
     category: 'Drilling Rigs & Machinery',
     categorySlug: 'rigs-machinery',
-    tagline: 'Top-Hammer Wagon System. SG Casting Guide Mast.',
-    description: 'A versatile pneumatic wagon drill for high-speed shallow blast hole drilling in granite and limestone quarries.',
-    longDescription: 'The PSR-W100 Wagon Drill is designed for cost-efficient vertical, horizontal, or angular boring. Mounted on a three-wheel pneumatic tire chassis with manual tow bars, it features a heavy structural guide mast and high-torque Airtech rotation motor.',
+    tagline: 'Pneumatic Wagon Drill on Wheels.',
+    description: 'A versatile wheeled rig for quick shallow drilling in quarries.',
+    longDescription: 'The PSR-W100 is a simple, low-cost wagon drill. It has three wheels so operators can move it manually. It uses standard compressors and is easy to maintain.',
     features: [
-      'Robust three-wheel chassis with dual anchor leveling jacks',
-      'Pneumatic mast cylinder feed mechanism',
-      'High-rigidity guide mast supporting 3-meter drill rods',
-      'Line oiler lubrication system'
+      'Three wheels with leveling jacks',
+      'Pneumatic feed system',
+      'Supports 3-meter rods',
+      'In-line oiler lubrication'
     ],
     benefits: [
-      'Easy to tow and reposition manually on tight benches',
-      'Simple mechanics allow fast field maintenance',
-      'Low operating fuel costs utilizing standard mobile compressors'
+      'Easy to move by hand',
+      'Simple to repair',
+      'Low fuel costs'
     ],
     applications: [
-      'Quarry dimensional stone splitting',
-      'Road cutting anchoring',
-      'Grout hole boring'
+      'Quarry stone splitting',
+      'Road anchoring',
+      'Grout holes'
     ],
     specs: {
       holeDiameter: '50 – 76 mm',
@@ -144,24 +144,24 @@ export const BASE_PRODUCTS: Product[] = [
     slug: 'psr-h6-water-well-boring-rig',
     category: 'Drilling Rigs & Machinery',
     categorySlug: 'rigs-machinery',
-    tagline: 'Deep Aquifer Core Rig. Double Spindle Guide.',
-    description: 'A truck-mounted heavy hydraulic rotary well rig for tapping deep agricultural and residential aquifers.',
-    longDescription: 'The PSR-H6 is a heavy-duty rotary derrick drilling rig designed to fit standard multi-axle truck platforms. Utilizing a dual-motor hydraulic rotation head and heavy pull-up cylinders, it can easily handle massive casing weights to drill deep well boreholes.',
+    tagline: 'Truck-Mounted Water Well Rig.',
+    description: 'A heavy truck rig to drill deep water wells.',
+    longDescription: 'The PSR-H6 is a heavy derrick drilling rig mounted on a truck. It uses strong hydraulic power to drill deep water wells quickly and handle heavy pipes.',
     features: [
-      'High-pressure hydraulic top drive rotation head',
-      'Heavy structural guide mast with 6.5-meter travel limits',
-      'Onboard heavy injection soap / foam lubricator',
-      'High capacity hydraulic pull-down feed force'
+      'Hydraulic top drive rotation',
+      '6.5-meter derrick mast',
+      'Water/soap injection pump',
+      'High hoisting force'
     ],
     benefits: [
-      'Tap groundwater aquifers at depths over 300 meters',
-      'High road transit speeds between agricultural boring jobs',
-      'Handles standard 6-meter drill pipes easily'
+      'Drills water wells up to 350m deep',
+      'Fast highway travel between sites',
+      'Handles long drill pipes easily'
     ],
     applications: [
-      'Deep aquifer agricultural well boring',
-      'Industrial aquifer dewatering',
-      'Geotechnical casing boring'
+      'Agricultural water wells',
+      'Mine dewatering wells',
+      'Geotechnical boring'
     ],
     specs: {
       holeDiameter: '150 – 250 mm',
@@ -184,24 +184,24 @@ export const BASE_PRODUCTS: Product[] = [
     slug: 'airtech-pneumatic-rock-drill',
     category: 'Drilling Rigs & Machinery',
     categorySlug: 'rigs-machinery',
-    tagline: 'Cast Iron Percussion. High-Frequency Blast Hole Tool.',
-    description: 'Robust percussion tools manufactured from cast iron, commonly used for blast-hole rock drilling.',
-    longDescription: 'The Airtech Pneumatic Rock Drill is a premier percussion drill designed for high penetration rates in hard rock quarries. Its cast iron main body provides outstanding shock dampening, while the internal piston transmits maximum kinetic energy to the drill steel.',
+    tagline: 'Robust Handheld Percussion Drill.',
+    description: 'A strong cast iron rock drill for blast holes.',
+    longDescription: 'The Airtech Pneumatic Rock Drill is a heavy percussion tool for quarries. Its cast iron body absorbs shock well, and its internal piston hits rock with high energy.',
     features: [
-      'High-frequency impact piston mechanism',
-      'Heavy-duty cast iron body casting',
-      'Dual flushing air-water tube inlet',
-      'Anti-vibration side handle mounts'
+      'High-frequency hammer piston',
+      'Cast iron body',
+      'Air-water flushing tube',
+      'Comfortable handles'
     ],
     benefits: [
-      'Unmatched drilling speed in hard quartz or basalt',
-      'Reduced operator fatigue from integrated dampening',
-      'Easy disassembly and maintenance in the field'
+      'Drills fast in hard rock',
+      'Reduces vibration for the operator',
+      'Easy to clean and fix'
     ],
     applications: [
-      'Blast-hole rock drilling in quarries',
-      'Civil highway anchoring',
-      'Micro-pile boring'
+      'Blast holes in quarries',
+      'Road anchoring',
+      'Concrete splitting'
     ],
     specs: {
       holeDiameter: '32 – 45 mm',
@@ -223,23 +223,23 @@ export const BASE_PRODUCTS: Product[] = [
     slug: 'slim-drill-ld4-machine',
     category: 'Drilling Rigs & Machinery',
     categorySlug: 'rigs-machinery',
-    tagline: 'Narrow Space Drilling. Compact LD4 Guide Mast.',
-    description: 'Compact units optimized for narrow workspace conditions, including models like the Slim Drill LD4.',
-    longDescription: 'The Slim Drill LD4 is a highly compact, lightweight drilling unit engineered specifically for narrow mining galleries and confined construction benches. Mounted on a lightweight aluminum frame with manual leveling anchors, it provides stable drilling operations in hard-to-reach locations.',
+    tagline: 'Compact Core Drill for Confined Spaces.',
+    description: 'A small core drilling machine for narrow workspaces.',
+    longDescription: 'The Slim Drill LD4 is a compact, lightweight rig built for narrow galleries. It has a lightweight aluminum frame that is easy to carry and set up in tight spaces.',
     features: [
-      'Ultra-compact sliding guide mast profile',
-      'Lightweight structural aluminum alloy frame',
-      'Pneumatic feed feed screw mechanism',
-      'High power-to-weight ratio rotation motor'
+      'Very small sliding mast',
+      'Lightweight aluminum frame',
+      'Pneumatic feed screw',
+      'Compact rotation motor'
     ],
     benefits: [
-      'Operates in tight spaces down to 1.2 meters clearance',
-      'Extremely easy manual transportation and set up',
-      'High boring accuracy in vertical and angular configurations'
+      'Fits in tight spaces down to 1.2m',
+      'Easy to carry by hand',
+      'Accurate vertical and angle holes'
     ],
     applications: [
-      'Narrow mining gallery bolt installations',
-      'Foundation anchoring in basements',
+      'Narrow mining galleries',
+      'Basement anchoring',
       'Confined quarry benches'
     ],
     specs: {
@@ -262,26 +262,24 @@ export const BASE_PRODUCTS: Product[] = [
     slug: 'airtech-70l4r-standard-pneumatic-motor',
     category: 'Rotation Motors',
     categorySlug: 'rotation-motors',
-    tagline: 'Standard Rotary Force. 4-Piston Heavy Duty.',
-    description: 'A 4-cylinder radial piston air motor designed for robust rotation in core borewells and surface quarry drills.',
-    longDescription: 'The Airtech 70L4R Standard is the industry benchmark for pneumatic drill string rotation. Utilizing 70mm diameter pistons acting on a single forged crankshaft throw, it delivers continuous high torque. It is self-lubricating via a built-in sump reservoir and features a reversible air chest, letting operators switch drilling directions instantly.',
+    tagline: 'Standard 4-Piston Pneumatic Motor.',
+    description: 'A 4-cylinder air motor for drill rotation.',
+    longDescription: 'The Airtech 70L4R Standard is a reliable pneumatic rotation drive. It uses four 70mm cylinders to deliver high torque. It is self-lubricating and can reverse rotation instantly.',
     features: [
-      'Four radial cylinder configuration with 70mm piston bores',
-      'Dual bearing supported front drive shaft case',
-      'Integrated rotary timing valve for synchronous air flow',
-      'Heavy cast iron casing with dual anchor mounting foot',
-      'High power-to-weight ratio'
+      'Four 70mm cylinders',
+      'Dual shaft bearings',
+      'Rotary timing valve',
+      'Ductile iron casing'
     ],
     benefits: [
-      'Capable of vertical or horizontal operations on any drill guide mast',
-      'High start-up torque allows rotation of locked rods',
-      'Minimal air leak bypass due to precision cross-hatch sleeve liners',
-      'Low mechanical noise discharge with built-in exhaust caps'
+      'Fits any wagon mast',
+      'High starting torque',
+      'Low internal air leaks'
     ],
     applications: [
-      'Limestone blast hole drilling rigs',
-      'Standard construction anchoring systems',
-      'Shallow aquifer water boring'
+      'Limestone blast holes',
+      'Construction anchoring',
+      'Shallow water boring'
     ],
     specs: {
       motorType: 'Piston Radial Air Motor (70mm Bore)',
@@ -330,24 +328,24 @@ export const BASE_PRODUCTS: Product[] = [
     slug: 'airtech-70l4r-t-high-torque-pneumatic-motor',
     category: 'Rotation Motors',
     categorySlug: 'rotation-motors',
-    tagline: 'Premium Gear Breakdown Torque. Tapered Nose Case.',
-    description: 'An upgraded 70L4R pneumatic motor optimized for hard strata rock breaking where torque limits are pushed.',
-    longDescription: 'The 70L4R-T variant features a heavy-duty tapered bearing nose cap housing and custom high-pressure cylinder liners. Rated up to 15 bar operating pressure, it delivers 20% higher start-up torque, ensuring continuous rotation in hard granite or basalt layers.',
+    tagline: 'High-Torque Pneumatic Motor.',
+    description: 'An upgraded air motor for drilling hard rocks.',
+    longDescription: 'The 70L4R-T is a high-torque air motor with a reinforced nose bearing cap. It works up to 15 bar pressure, preventing stalls when drilling hard granite or basalt.',
     features: [
-      'Tapered front spindle cap with dual steel thrust shims',
-      'High-pressure carbon composite cylinder liner sleeve inserts',
-      'Reversible rotary Timing valve with enlarged bypass ports',
-      'Heavy-duty cast bronze casing coat for thermal resistance'
+      'Reinforced front bearing cap',
+      'Composite cylinder liners',
+      'Large timing valve ports',
+      'Thermal resistant coat'
     ],
     benefits: [
-      'Eliminates rotation stalls in binding clay or fractured rock strata',
-      'Extended bearing life due to dual-groove 6210 2RS bearings layout',
-      'Highly resistant to abrasive sand slurry backflow'
+      'Prevents stalling in hard rock',
+      'Longer bearing life',
+      'Resists sand and mud entry'
     ],
     applications: [
-      'Hard granite quarrying blast holes',
-      'Deep rock micro-piling anchoring',
-      'Down-the-hole hammer rotation drives'
+      'Hard rock blast holes',
+      'Deep anchoring systems',
+      'DTH hammer drives'
     ],
     specs: {
       motorType: 'Piston Radial Air Motor (70mm Bore)',
@@ -386,24 +384,24 @@ export const BASE_PRODUCTS: Product[] = [
     slug: 'airtech-70l4r-l-deep-borewell-pneumatic-motor',
     category: 'Rotation Motors',
     categorySlug: 'rotation-motors',
-    tagline: 'Deep Spindle Extension. High Backpressure Rating.',
-    description: 'Designed specifically for deep aquifer borewell drilling, featuring a long splined output shaft.',
-    longDescription: 'The 70L4R-L is engineered for deep water well boring rigs where casing weights are massive. Equipped with an extended front API drive spindle and double-lipped oil seals, it operates reliably under high backpressure and wet water injection operations.',
+    tagline: 'Deep Borewell Pneumatic Motor.',
+    description: 'A pneumatic motor with long splined shaft for deep wells.',
+    longDescription: 'The 70L4R-L is built for deep water well rigs. It features an extended front drive spindle and double rubber seals to prevent mud and water from entering the motor.',
     features: [
-      'Extended front drive spindle with thread keyway locks',
-      'Double NBR rubber grease seal rings preventing water ingress',
-      'Cast-bronze valve chest with custom exhaust silencing baffles',
-      'Integrated oil separator casing'
+      'Extended front drive spindle',
+      'Double rubber grease seals',
+      'Silenced exhaust cap',
+      'Built-in oil separator'
     ],
     benefits: [
-      'Prevents water and sand slurry from entering the crankcase sump',
-      'Exceptional performance at depths exceeding 200 meters',
-      'Reduces exhaust air noise level down to OSHA limits'
+      'Keeps mud and water out of the motor',
+      'Works well at depths over 200m',
+      'Reduces exhaust noise'
     ],
     applications: [
-      'Deep agricultural aquifer boring',
-      'Geothermal loop installations',
-      'Dewatering shafts in open cast mines'
+      'Deep agricultural wells',
+      'Geothermal loop drilling',
+      'Mine shaft dewatering'
     ],
     specs: {
       motorType: 'Piston Radial Air Motor (70mm Bore)',
@@ -442,24 +440,24 @@ export const BASE_PRODUCTS: Product[] = [
     slug: 'heavy-drilling-machine-spares-package',
     category: 'Crankcase',
     categorySlug: 'crankcase',
-    tagline: 'OEM Drivetrain Spares. Precision Machined Gears.',
-    description: 'Precision drivetrain parts such as worm gear wheels, main shaft gear assemblies, idler gear shafts, and output gears.',
-    longDescription: 'Ensure maximum torque transfer and zero power loss with our heavy drilling machine drivetrain spares package. Made from high-grade case-hardened steel alloys and precision hobbed to sub-micron tolerances, these gears guarantee silent and smooth operation under the most severe drilling loads.',
+    tagline: 'OEM Gear and Drivetrain Spares.',
+    description: 'Precision gears, shaft assemblies, and worm wheels.',
+    longDescription: 'Keep your rotation heads running smoothly with our gear spares package. These gears are made of case-hardened steel and cut to precise sizes to ensure smooth power transfer.',
     features: [
-      'Case-hardened steel gear surfaces (58-62 HRC)',
-      'Precision hobbed profiles for optimal tooth contact',
-      'High-tensile steel idler shafts',
-      'Compatible with major wagon and crawler rigs'
+      'Case-hardened steel gears',
+      'Precise teeth cut',
+      'High-strength shafts',
+      'Fits standard rigs'
     ],
     benefits: [
-      'Eliminates gear stripping under peak torque loads',
-      'Improves overall mechanical drivetrain efficiency',
-      'Extends rotation head life-cycles'
+      'Prevents gear damage under heavy load',
+      'Improves rotation efficiency',
+      'Extends gearbox lifespan'
     ],
     applications: [
-      'Wagon drill rotation head refits',
+      'Wagon drill rotation head repair',
       'Crawler drill gearbox maintenance',
-      'Heavy rotary head overhauls'
+      'General rotary head overhauls'
     ],
     specs: {
       motorType: 'Drivetrain Gears Set',
@@ -480,24 +478,24 @@ export const BASE_PRODUCTS: Product[] = [
     slug: 'heavy-duty-drilling-tools-package',
     category: 'Air System',
     categorySlug: 'air-system',
-    tagline: 'High-Strength Drill Steel. Tungsten Button Bits.',
-    description: 'High-strength drill rods (ranging from 2-metre to 3-metre configurations), hammer assemblies, thread button bits, and pneumatic distributor valves.',
-    longDescription: 'A complete high-performance drilling toolset containing premium 2m to 3m carburized steel drill rods, DTH hammer assemblies, tungsten-carbide thread button bits, and line distributor valves. Designed for abrasive rock formations.',
+    tagline: 'High-Strength Drill Rods & Bits.',
+    description: 'Drill rods (2m to 3m), DTH hammers, and button bits.',
+    longDescription: 'A complete high-performance drilling toolset including high-strength carburized drill rods, DTH hammer assemblies, and tungsten carbide button bits.',
     features: [
-      'Carburized hollow steel alloy drill rods',
-      'Hard-faced tungsten carbide button bit inserts',
-      'High-efficiency pneumatic flushing valves',
-      'Heavy impact hammer pistons'
+      'Carburized steel drill rods',
+      'Tungsten carbide button bits',
+      'High-flow flushing valves',
+      'Impact hammer pistons'
     ],
     benefits: [
-      'Increases penetration speed by up to 25%',
-      'Reduces drill rod wear in highly abrasive granite',
-      'Provides superior hole cleaning efficiency'
+      'Drills up to 25% faster',
+      'Rods last longer in hard granite',
+      'Cleans dust out of holes efficiently'
     ],
     applications: [
-      'Basalt and granite blast hole drilling',
-      'Deep aquifer water well boring',
-      'Mining extraction benches'
+      'Basalt and granite blast holes',
+      'Deep water well drilling',
+      'General rock excavations'
     ],
     specs: {
       motorType: 'Boring Tools Package',
