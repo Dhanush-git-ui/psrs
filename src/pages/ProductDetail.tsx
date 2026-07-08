@@ -3,14 +3,13 @@ import { PRODUCTS, BASE_PRODUCTS, convertInventoryToProduct } from '@/data/produ
 import type { Product } from '@/data/products';
 import { useQuote } from '@/context/QuoteContext';
 import HotspotExplorer from '@/components/ui/HotspotExplorer';
-import { ArrowLeft, Check, Download, FileText, Send, HelpCircle, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Download, FileText, HelpCircle, CheckCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export default function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const { addToQuote, quoteItems, removeFromQuote } = useQuote();
-  const [formSubmitted, setFormSubmitted] = useState(false);
   const [customization, setCustomization] = useState({
     engineType: 'Standard Pneumatic',
     mastLength: 'Standard 3.6m',
@@ -66,13 +65,6 @@ export default function ProductDetail() {
     (p) => p.categorySlug === product.categorySlug && p.id !== product.id
   ).slice(0, 3);
 
-  const handleSubmitInquiry = (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormSubmitted(true);
-    setTimeout(() => {
-      setFormSubmitted(false);
-    }, 5000);
-  };
 
   return (
     <div className="pt-28 pb-24 bg-white select-text">
@@ -411,70 +403,6 @@ export default function ProductDetail() {
           </div>
         )}
 
-        {/* 6. In-Page Inquiry Form */}
-        <div className="p-8 md:p-12 border border-brand-bordergray bg-brand-charcoal text-white rounded-3xl mb-16 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(200,16,46,0.1),transparent_50%)]" />
-          <div className="relative z-10 max-w-2xl space-y-6">
-            <span className="font-heading text-xs font-bold uppercase tracking-widest text-brand-red">
-              Direct Quotation Inquiry
-            </span>
-            <h3 className="font-display text-2xl md:text-3xl font-bold">
-              Submit a direct inquiry for {product.name}
-            </h3>
-            <p className="font-sans text-sm text-white/70">
-              Our team will review your request and reply within 24 hours with pricing and details.
-            </p>
-
-            {formSubmitted ? (
-              <div className="p-6 bg-brand-red/10 border border-brand-red rounded-2xl flex items-center gap-3 animate-fade-in">
-                <Check className="text-brand-red shrink-0" size={24} />
-                <div className="space-y-0.5">
-                  <h5 className="font-heading text-sm font-bold text-white uppercase tracking-wider">Inquiry Sent</h5>
-                  <p className="font-sans text-xs text-white/70">We have received your request and will reply soon.</p>
-                </div>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmitInquiry} className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  required
-                  className="p-3.5 bg-white/5 border border-white/10 rounded-xl font-sans text-sm text-white placeholder-white/40 focus:outline-none focus:border-brand-red"
-                />
-                <input
-                  type="email"
-                  placeholder="Business Email"
-                  required
-                  className="p-3.5 bg-white/5 border border-white/10 rounded-xl font-sans text-sm text-white placeholder-white/40 focus:outline-none focus:border-brand-red"
-                />
-                <input
-                  type="text"
-                  placeholder="Company Name"
-                  required
-                  className="p-3.5 bg-white/5 border border-white/10 rounded-xl font-sans text-sm text-white placeholder-white/40 focus:outline-none focus:border-brand-red"
-                />
-                <input
-                  type="text"
-                  placeholder="Country / Port of Delivery"
-                  required
-                  className="p-3.5 bg-white/5 border border-white/10 rounded-xl font-sans text-sm text-white placeholder-white/40 focus:outline-none focus:border-brand-red"
-                />
-                <textarea
-                  placeholder="Application Details (Strata hardness, required depth, volume...)"
-                  rows={4}
-                  required
-                  className="sm:col-span-2 p-3.5 bg-white/5 border border-white/10 rounded-xl font-sans text-sm text-white placeholder-white/40 focus:outline-none focus:border-brand-red resize-none"
-                />
-                <button
-                  type="submit"
-                  className="sm:col-span-2 py-4 bg-brand-red hover:bg-brand-crimson text-white font-heading text-xs font-semibold uppercase tracking-widest rounded-xl transition-colors flex items-center justify-center gap-2"
-                >
-                  <Send size={14} /> Submit Inquiry
-                </button>
-              </form>
-            )}
-          </div>
-        </div>
 
         {/* 7. Related Products Slider */}
         {relatedProducts.length > 0 && (
