@@ -91,7 +91,38 @@ export const BASE_PRODUCTS: Product[] = [
       weight: '12,500 kg',
       feedLength: '6.8 meters'
     },
-    hotspots: [],
+    hotspots: [
+      {
+        id: 'hs1',
+        name: 'Heavy Tracks',
+        x: 24,
+        y: 76,
+        function: 'Independent tracks for rough ground.',
+        material: 'High-Strength Steel',
+        benefit: 'Moves easily on steep slopes.',
+        maintenance: 'Clean and grease every 50 operating hours.'
+      },
+      {
+        id: 'hs2',
+        name: 'Hydraulic Mast',
+        x: 42,
+        y: 55,
+        function: 'Lifts and levels the drill guides.',
+        material: 'Reinforced Steel',
+        benefit: 'Ensures accurate drilling angles.',
+        maintenance: 'Check hydraulic fluid level daily.'
+      },
+      {
+        id: 'hs3',
+        name: 'Rotary Head',
+        x: 52,
+        y: 25,
+        function: 'Turns the drill rods with high power.',
+        material: 'Tempered Alloy Steel',
+        benefit: 'Drills fast in hard rock.',
+        maintenance: 'Inspect gear oil every 100 hours.'
+      }
+    ],
     faqs: [],
     brochureUrl: '/brochure.pdf',
     datasheetUrl: '/datasheet.pdf',
@@ -131,7 +162,38 @@ export const BASE_PRODUCTS: Product[] = [
       weight: '980 kg',
       feedLength: '3.6 meters'
     },
-    hotspots: [],
+    hotspots: [
+      {
+        id: 'hs1',
+        name: 'Tire Wheels',
+        x: 31,
+        y: 80,
+        function: 'Three wheels for simple manual transport.',
+        material: 'Heavy-Duty Rubber & Steel',
+        benefit: 'Easy to move around the quarry.',
+        maintenance: 'Check tire pressure weekly.'
+      },
+      {
+        id: 'hs2',
+        name: 'Feed Mast',
+        x: 50,
+        y: 40,
+        function: 'Pushes the drill down using air power.',
+        material: 'Structural Steel',
+        benefit: 'Delivers steady drilling pressure.',
+        maintenance: 'Check air lines for leaks daily.'
+      },
+      {
+        id: 'hs3',
+        name: 'Drill Bit Joint',
+        x: 50,
+        y: 92,
+        function: 'Connects the bit to the drill rod.',
+        material: 'Hardened Tool Steel',
+        benefit: 'Quick and safe bit replacement.',
+        maintenance: 'Clean and apply thread grease before use.'
+      }
+    ],
     faqs: [],
     brochureUrl: '/brochure.pdf',
     datasheetUrl: '/datasheet.pdf',
@@ -171,7 +233,38 @@ export const BASE_PRODUCTS: Product[] = [
       weight: '6,200 kg (mast & deck assembly)',
       feedLength: '6.5 meters'
     },
-    hotspots: [],
+    hotspots: [
+      {
+        id: 'hs1',
+        name: 'Stabilizer Jacks',
+        x: 23,
+        y: 80,
+        function: 'Keeps the truck stable during drilling.',
+        material: 'Heavy Steel Plates',
+        benefit: 'Prevents the truck from shifting.',
+        maintenance: 'Check hydraulic locks before operations.'
+      },
+      {
+        id: 'hs2',
+        name: 'Derrick Mast',
+        x: 51,
+        y: 52,
+        function: 'Supports the long heavy drill pipes.',
+        material: 'Structural Steel Frame',
+        benefit: 'Handles heavy aquifer loads easily.',
+        maintenance: 'Inspect structural welds monthly.'
+      },
+      {
+        id: 'hs3',
+        name: 'Top Spindle Drive',
+        x: 51,
+        y: 12,
+        function: 'Pushes and rotates the casing pipes.',
+        material: 'Forged Alloy Steel',
+        benefit: 'High torque rotation for deep wells.',
+        maintenance: 'Grease top bearings daily.'
+      }
+    ],
     faqs: [],
     brochureUrl: '/brochure.pdf',
     datasheetUrl: '/datasheet.pdf',
@@ -210,7 +303,38 @@ export const BASE_PRODUCTS: Product[] = [
       weight: '24 kg',
       dimensions: '580 x 220 x 180 mm'
     },
-    hotspots: [],
+    hotspots: [
+      {
+        id: 'hs1',
+        name: 'Operating Handles',
+        x: 31,
+        y: 35,
+        function: 'Gives the operator a safe, steady grip.',
+        material: 'Vibration-Dampened Rubber',
+        benefit: 'Reduces operator hand fatigue.',
+        maintenance: 'Check handle mounts for tightness.'
+      },
+      {
+        id: 'hs2',
+        name: 'Cast Iron Body',
+        x: 50,
+        y: 45,
+        function: 'Contains the main hammer piston.',
+        material: 'Heavy Cast Iron',
+        benefit: 'Absorbs heavy shock impacts.',
+        maintenance: 'Keep outer casing clean of dust.'
+      },
+      {
+        id: 'hs3',
+        name: 'Steel Retainer',
+        x: 50,
+        y: 75,
+        function: 'Holds the drill rod firmly in place.',
+        material: 'Carburized Steel',
+        benefit: 'Prevents rods from slipping out.',
+        maintenance: 'Replace latch spring if worn.'
+      }
+    ],
     faqs: [],
     brochureUrl: '/brochure.pdf',
     datasheetUrl: '/datasheet.pdf',
@@ -249,7 +373,38 @@ export const BASE_PRODUCTS: Product[] = [
       weight: '180 kg',
       dimensions: '1100 x 480 x 780 mm'
     },
-    hotspots: [],
+    hotspots: [
+      {
+        id: 'hs1',
+        name: 'Aluminum Frame',
+        x: 46,
+        y: 45,
+        function: 'Supports the guide sliding mast.',
+        material: 'Lightweight Aluminum Alloy',
+        benefit: 'Easy to carry in narrow tunnels.',
+        maintenance: 'Wipe rails clean after work.'
+      },
+      {
+        id: 'hs2',
+        name: 'Feed Screw',
+        x: 50,
+        y: 25,
+        function: 'Pushes the drill head along the mast.',
+        material: 'High-Tensile Carbon Steel',
+        benefit: 'Smooth feed rate in tight spaces.',
+        maintenance: 'Apply clean gear grease weekly.'
+      },
+      {
+        id: 'hs3',
+        name: 'Boring Bit',
+        x: 50,
+        y: 90,
+        function: 'Cuts through hard quarry walls.',
+        material: 'Tungsten Carbide Button Bit',
+        benefit: 'Fast penetration in hard granite.',
+        maintenance: 'Inspect carbide buttons for chips.'
+      }
+    ],
     faqs: [],
     brochureUrl: '/brochure.pdf',
     datasheetUrl: '/datasheet.pdf',

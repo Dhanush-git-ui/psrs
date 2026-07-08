@@ -78,6 +78,22 @@ export default function HotspotExplorer({ hotspots, productType }: HotspotExplor
               <path d="M 370 120 L 450 200 M 450 120 L 370 200" />
               <path d="M 370 200 L 450 280 M 450 200 L 370 280" />
             </>
+          ) : productType === 'rock_drill' ? (
+            <>
+              {/* Handheld Rock Drill body */}
+              <rect x="350" y="150" width="100" height="200" rx="8" />
+              <path d="M 310 150 L 350 180 M 490 150 L 450 180" strokeWidth="3" />
+              <rect x="390" y="350" width="20" height="80" />
+              <line x1="400" y1="430" x2="400" y2="470" strokeWidth="4" className="stroke-brand-red" />
+            </>
+          ) : productType === 'slim_drill' ? (
+            <>
+              {/* Slim Drill guide frame */}
+              <rect x="370" y="100" width="60" height="300" rx="4" />
+              <line x1="400" y1="100" x2="400" y2="400" strokeWidth="2" />
+              <rect x="340" y="380" width="120" height="20" rx="2" />
+              <line x1="400" y1="400" x2="400" y2="450" strokeWidth="3" className="stroke-brand-red" />
+            </>
           ) : (
             <>
               {/* Generic bit/cylindrical schematic */}
