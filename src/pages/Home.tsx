@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Drill, Shield, Zap, Globe, Compass, Check } from 'lucide-react';
+import { ArrowRight, Drill, Shield, Zap, Globe, Check } from 'lucide-react';
 import Drill3DViewer from '@/components/ui/Drill3DViewer';
 import MagneticButton from '@/components/ui/MagneticButton';
 import { CATEGORIES } from '@/data/products';
@@ -500,24 +500,16 @@ export default function Home() {
           </div>
 
           {/* Map Mock */}
-          <div className="lg:col-span-7 p-6 border border-white/10 rounded-2xl bg-white/5 relative aspect-video flex items-center justify-center">
-            <svg viewBox="0 0 1000 500" className="w-full h-full stroke-current text-white/10 opacity-70 fill-none">
-              <path d="M150 150 Q 250 100 350 150 T 450 150 T 550 100 T 650 150" strokeWidth="1" strokeDasharray="3,3" />
-              <path d="M100 350 Q 200 300 350 420 T 500 380 T 650 400" strokeWidth="1" strokeDasharray="3,3" />
-              <circle cx="200" cy="180" r="4" className="fill-brand-red" />
-              <circle cx="350" cy="350" r="4" className="fill-brand-red animate-ping" />
-              <circle cx="350" cy="350" r="4" className="fill-brand-red" />
-              <circle cx="520" cy="180" r="4" className="fill-brand-red" />
-              <circle cx="620" cy="320" r="4" className="fill-brand-red animate-ping" />
-              <circle cx="620" cy="320" r="4" className="fill-brand-red" />
-              <circle cx="720" cy="220" r="6" className="fill-brand-red animate-pulse" />
-              <circle cx="720" cy="220" r="10" stroke="rgba(200, 16, 46, 0.4)" strokeWidth="1" />
-              <circle cx="850" cy="350" r="4" className="fill-brand-red" />
-            </svg>
-            <div className="absolute bottom-4 left-6 flex items-center gap-1.5 text-[9px] font-heading font-bold uppercase tracking-widest text-white/40">
-              <Compass size={12} />
-              <span>Direct shipping active worldwide</span>
-            </div>
+          <div className="lg:col-span-7 border border-white/10 rounded-2xl bg-white/5 relative aspect-video overflow-hidden shadow-2xl">
+            <iframe
+              title="Hyderabad Office Location"
+              src="https://maps.google.com/maps?q=17.4748,78.4501&z=15&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: 'grayscale(1) invert(0.9) contrast(1.2)' }}
+              allowFullScreen={false}
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
