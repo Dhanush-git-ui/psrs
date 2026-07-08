@@ -39,9 +39,9 @@ export default function Contact() {
 
   const offices = [
     {
-      city: 'Bangalore (HQ & Factory)',
+      city: 'Hyderabad (HQ & Factory)',
       role: 'Manufacturing & Domestic Sales',
-      address: 'Industrial Area, Phase III, Bangalore, Karnataka 560058',
+      address: 'A-13, IDA, Balanagar, Hyderabad, Telangana 500037',
       tel: '+91 80 4920 1200',
       email: 'sales@psrsrockdrills.com'
     },
@@ -309,6 +309,19 @@ export default function Contact() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Map Section */}
+        <div className="mt-16 border border-brand-bordergray rounded-3xl overflow-hidden shadow-sm h-[450px]">
+          <iframe
+            title="Hyderabad HQ & Factory Map"
+            src="https://maps.google.com/maps?q=17.4748,78.4501&z=15&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={false}
+            loading="lazy"
+          />
         </div>
       </div>
     </div>

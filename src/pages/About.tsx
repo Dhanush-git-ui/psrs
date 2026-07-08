@@ -48,7 +48,7 @@ export default function About() {
               At PSR, we make sure your work does not stop due to tool failures. The high stress of drilling requires strong metal parts. That is why we make all our products inside our own factory.
             </p>
             <p className="font-sans text-sm text-brand-graphite leading-relaxed">
-              Every cylinder sleeve, button bit, and thread connection is designed, forged, and tested in our Bangalore head office. This keeps our quality high.
+              Every cylinder sleeve, button bit, and thread connection is designed, forged, and tested in our Hyderabad head office. This keeps our quality high.
             </p>
           </div>
 

@@ -365,7 +365,7 @@ export default function Products() {
                 <h6 className="font-heading text-xs font-bold uppercase tracking-wider">Need Custom Specs?</h6>
               </div>
               <p className="font-sans text-[11px] text-white/70 leading-relaxed">
-                Contact our Bangalore office for custom guides, special gears, or other custom tools.
+                Contact our Hyderabad office for custom guides, special gears, or other custom tools.
               </p>
               <Link
                 to="/contact"

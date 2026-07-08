@@ -249,7 +249,7 @@ function AppContent() {
             <ul className="space-y-3 font-sans text-sm text-brand-white/60">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-brand-red shrink-0 mt-0.5" />
-                <span>Industrial Zone Phase III, Bangalore, Karnataka, India</span>
+                <span>A-13, IDA, Balanagar, Hyderabad, Telangana 500037, India</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-brand-red shrink-0" />
