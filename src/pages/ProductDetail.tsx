@@ -22,8 +22,13 @@ export default function ProductDetail() {
 
   useEffect(() => {
     const fetchDynamicProducts = async () => {
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      const apiUrl = isLocal 
+        ? 'http://localhost:3000/api/inventory' 
+        : 'https://psrs-admin-dhanush-git-uis-projects.vercel.app/api/inventory';
+
       try {
-        const response = await fetch('https://psrs-admin.vercel.app/api/inventory');
+        const response = await fetch(apiUrl);
         if (!response.ok) throw new Error('API failed');
         const data = await response.json();
         if (data && data.length > 0) {

@@ -20,8 +20,13 @@ export default function Inventory() {
 
   useEffect(() => {
     const fetchInventory = async () => {
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      const apiUrl = isLocal 
+        ? 'http://localhost:3000/api/inventory' 
+        : 'https://psrs-admin-dhanush-git-uis-projects.vercel.app/api/inventory';
+
       try {
-        const response = await fetch('https://psrs-admin.vercel.app/api/inventory');
+        const response = await fetch(apiUrl);
         if (!response.ok) throw new Error('API request failed');
         const data = await response.json();
         if (data && data.length > 0) {
@@ -78,43 +83,74 @@ export default function Inventory() {
   const filteredItems = getFilteredItems();
 
   // Stock flow handler
-  const handleStockAdjust = (sku: string, direction: 'in' | 'out') => {
+  const handleStockAdjust = async (sku: string, direction: 'in' | 'out') => {
     setStockActionError('');
     if (stockAmount <= 0) {
       setStockActionError('Quantity must be greater than 0');
       return;
     }
 
-    setInventoryList((prev) => 
-      prev.map((item) => {
-        if (item.sku === sku) {
-          const newQty = direction === 'in' 
-            ? item.currentStock + stockAmount 
-            : item.currentStock - stockAmount;
+    const item = inventoryList.find((i) => i.sku === sku);
+    if (!item) return;
 
-          if (newQty < 0) {
-            setStockActionError('Negative stock is not permitted');
-            return item;
+    const newQty = direction === 'in' 
+      ? item.currentStock + stockAmount 
+      : item.currentStock - stockAmount;
+
+    if (newQty < 0) {
+      setStockActionError('Negative stock is not permitted');
+      return;
+    }
+
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const apiUrl = isLocal 
+      ? 'http://localhost:3000/api/products/adjust-stock' 
+      : 'https://psrs-admin-dhanush-git-uis-projects.vercel.app/api/products/adjust-stock';
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          sku,
+          action: direction === 'in' ? 'INBOUND' : 'OUTBOUND',
+          quantity: stockAmount,
+          reason: `Stock adjustment from main portal client: ${direction === 'in' ? 'Inbound' : 'Outbound'}`
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to adjust stock in database');
+      }
+
+      setInventoryList((prev) => 
+        prev.map((item) => {
+          if (item.sku === sku) {
+            const updatedItem = {
+              ...item,
+              currentStock: newQty,
+              status: (newQty === 0 ? 'Out of Stock' : newQty <= 10 ? 'Low Stock' : 'In Stock') as 'In Stock' | 'Low Stock' | 'Out of Stock',
+              lastUpdatedDate: new Date().toISOString().split('T')[0]
+            };
+
+            // Update active popup detail view
+            if (selectedItem?.sku === sku) {
+              setSelectedItem(updatedItem);
+            }
+
+            return updatedItem;
           }
-
-          const updatedItem = {
-            ...item,
-            currentStock: newQty,
-            status: (newQty === 0 ? 'Out of Stock' : newQty <= 10 ? 'Low Stock' : 'In Stock') as 'In Stock' | 'Low Stock' | 'Out of Stock',
-            lastUpdatedDate: new Date().toISOString().split('T')[0]
-          };
-
-          // Update active popup detail view
-          if (selectedItem?.sku === sku) {
-            setSelectedItem(updatedItem);
-          }
-
-          return updatedItem;
-        }
-        return item;
-      })
-    );
-    setStockAmount(1);
+          return item;
+        })
+      );
+      setStockAmount(1);
+    } catch (err: any) {
+      console.error(err);
+      setStockActionError(err.message || 'Failed to connect to database for stock flow');
+    }
   };
 
   // Convert InventoryItem to mock Product for RFQ integration

@@ -23,13 +23,55 @@ export default function Quote() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate sending lead file to endpoint
-    setFormSubmitted(true);
-    setTimeout(() => {
-      clearQuote();
-    }, 100);
+
+    const items = quoteItems.map((item) => ({
+      id: item.product.id,
+      name: item.product.name,
+      category: item.product.category,
+      quantity: item.quantity,
+      specs: item.product.specs || {}
+    }));
+
+    const payload = {
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      phone: formData.phone,
+      country: formData.country,
+      port: formData.port,
+      urgency: formData.urgency,
+      message: formData.message || null,
+      items,
+    };
+
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const apiUrl = isLocal 
+      ? 'http://localhost:3000/api/quotations' 
+      : 'https://psrs-admin-dhanush-git-uis-projects.vercel.app/api/quotations';
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit quotation request');
+      }
+
+      setFormSubmitted(true);
+      setTimeout(() => {
+        clearQuote();
+      }, 100);
+    } catch (err) {
+      console.error(err);
+      alert('Failed to submit quotation. Please try again.');
+    }
   };
 
   if (formSubmitted) {
